@@ -34,7 +34,7 @@ Demo of the PetPortal website. <br>
 ## Authors
 **Trevor Pratt**
 - [GitHub Profile](https://github.com/tpratt57/)
-- [LinkedIn](#)
+- [LinkedIn](https://www.linkedin.com/in/trevor-pratt-477b1b188/)
 
 **Christian Carmona**
 - [GitHub Profile](https://github.com/C4RMONA/)
