@@ -40,7 +40,7 @@ Demo of the PetPortal website. <br>
 - [GitHub Profile](https://github.com/C4RMONA/)
 - [LinkedIn](https://linkedin.com/in/christian-carmona-b01547103)
 
-**Madelyn Oliveros**
+**Maggie Oliveros**
 - [GitHub Profile](https://github.com/mcoliveros1202)
 - [LinkedIn](https://linkedin.com/in/madelynoliveros)
 
