@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Box, Grid, createTheme, ThemeProvider } from '@mui/material';
 import './index.css'
 import { teal, cyan } from '@mui/material/colors';
-import { bgcolor } from '@mui/system';
 
 const theme = createTheme({
   palette: {
