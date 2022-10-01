@@ -14,8 +14,8 @@ const theme = createTheme({
 })
 
 const Signup = () => {
-
   
+
   return (
     <ThemeProvider theme={theme}>
       <Card variant="outline" >
