@@ -48,7 +48,7 @@ export const ADD_TEACHER = gql`
   }
 `
 
-export const ADD_Post = gql`
+export const ADD_POST = gql`
   mutation addPost($postText: String!) {
     addPost(postText: $postText) {
       _id
