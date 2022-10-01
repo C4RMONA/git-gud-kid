@@ -43,7 +43,7 @@ const PostList = () => {
                   thought on {thought.createdAt}
                 </p>
                 <div>
-                  <Typography sx={{ width: '800px' }}>
+                  <Typography sx={{ width: '80%' }}>
                     {thought.thoughtText}
                   </Typography>
                   <div>
