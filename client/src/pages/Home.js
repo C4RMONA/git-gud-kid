@@ -48,14 +48,15 @@ const Home = () => {
   };
 
   return (
-    <Box className='homecarousel' sx={{ maxWidth: maxWidth, flexGrow: 1 }} align="center">
+    <Box className='homecarousel' sx={{ maxWidth: maxWidth, flexGrow: 1, height: maxHeight }} align="center">
         {images.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 0 ? (
               <Box
                 component="img"
                 sx={{
-                  height: maxHeight,
+                  height: '500px',
+                  paddingTop: '2%',
                   display: 'block',
                   maxWidth: "50%",
                   overflow: 'hidden',
