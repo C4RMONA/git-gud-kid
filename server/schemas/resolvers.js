@@ -10,6 +10,20 @@ const resolvers = {
     post: async (parent, { _id }) => {
       return Post.findOne({ _id });
     },
+
+    // get all users
+    users: async () => {
+      return User.find()
+      .select("-__v -password")
+      .populate("posts");
+    },
+    
+    // get user by username
+    user: async (parent, { username }) => {
+      return User.findOne({ username })
+        .select("-__v -password")
+        .populate("posts");
+    },
   },
 };
 
