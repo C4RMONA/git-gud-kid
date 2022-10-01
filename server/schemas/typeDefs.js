@@ -16,7 +16,16 @@ const typeDefs = gql`
     username: String
   }
 
+  type User {
+    _id: ID
+    username: String
+    email: String
+    posts: [Post]
+  }
+
   type Query {
+    users: [User]
+    user(username: String!): User
     posts(username: String): [Post]
     post(_id: ID!): Post
   }

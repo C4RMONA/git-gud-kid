@@ -1,4 +1,4 @@
-const { Post } = require("../models");
+const { User, Post } = require("../models");
 
 const resolvers = {
   Query: {
@@ -8,7 +8,7 @@ const resolvers = {
     },
 
     post: async (parent, { _id }) => {
-      return post.findOne({ _id });
+      return Post.findOne({ _id });
     },
   },
 };
