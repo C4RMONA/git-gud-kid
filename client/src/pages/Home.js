@@ -6,24 +6,28 @@ import { maxHeight, maxWidth } from '@mui/system';
 
 const images = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+    label: 'sciencefair',
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      '../assets/sciencefair.jpg',
+    ext: 'jpg'
   },
   {
-    label: 'Bird',
+    label: 'classroom-pet-ideas',
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      '../assets/classroom-pet-ideas',
+    ext: 'jpg'
   },
   {
-    label: 'Bali, Indonesia',
+    label: 'blogskillingit',
     imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
+      '../assets/blogskillingit',
+    ext: 'jpg'
   },
   {
-    label: 'Goč, Serbia',
+    label: '6764759_orig',
     imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+      '../assets/6764759_orig.png',
+    ext: 'png'
   },
 ];
 
@@ -62,7 +66,7 @@ const Home = () => {
                   overflow: 'hidden',
                   width: '100%',
                 }}
-                src={step.imgPath}
+                src={require(`../assets/${step.label}.${step.ext}`)}
                 alt={step.label}
               />
             ) : null}
