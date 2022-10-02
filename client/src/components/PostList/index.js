@@ -4,6 +4,8 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MessageIcon from '@mui/icons-material/Message';
 import './index.css'
 
+import Card from "../Card";
+
 const thoughts = [
   {
     id: '1',
@@ -36,31 +38,33 @@ const PostList = () => {
         <div className="postMap">
           {thoughts &&
             thoughts.map(thought => (
-              <div key={thought._id}>
-                <h2>{title}</h2>
-                <p>
-                  {thought.username}
-                  thought on {thought.createdAt}
-                </p>
-                <div>
-                  <Typography sx={{ width: '800px' }}>
-                    {thought.thoughtText}
-                  </Typography>
+              <Card cardWidth="49.5vw">
+                <div key={thought._id}>
+                  <h2>{title}</h2>
+                  <p>
+                    {thought.username}
+                    thought on {thought.createdAt}
+                  </p>
                   <div>
-                    <FavoriteBorderIcon className="icon"></FavoriteBorderIcon>
-                    <MessageIcon className="icon"></MessageIcon>
-                    <a href="/dashboard" className="comment">
-                      4 Comments {thought.reactionCount}
-                    </a>
+                    <Typography sx={{ width: '800px' }}>
+                      {thought.thoughtText}
+                    </Typography>
+                    <div>
+                      <FavoriteBorderIcon className="icon"></FavoriteBorderIcon>
+                      <MessageIcon className="icon"></MessageIcon>
+                      <a href="/dashboard" className="comment">
+                        4 Comments {thought.reactionCount}
+                      </a>
+
+                    </div>
 
                   </div>
-
                 </div>
-              </div>
+              </Card>
             ))}
         </div>
-      </Box>
-    </div>
+      </Box >
+    </div >
   )
 }
 
