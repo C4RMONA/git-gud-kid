@@ -1,7 +1,8 @@
 import React from "react";
 import { CssBaseline, Box } from '@mui/material';
-import PostForm from "../PostForm";
+
 import PostList from "../PostList";
+import PostDialoug from "../AddPost";
 
 const Dashboard = () => {
 
@@ -14,8 +15,7 @@ const Dashboard = () => {
           flexDirection: 'column',
           alignItems: 'center',
         }}>
-
-        <PostForm />
+          <PostDialoug/>
         <PostList />
       </Box>
     </div >
