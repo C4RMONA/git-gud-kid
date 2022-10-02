@@ -1,6 +1,6 @@
 import React from "react";
 import { CssBaseline, Box } from '@mui/material';
-
+import Card from "../Card";
 import PostForm from "../PostForm";
 import PostList from "../PostList";
 
@@ -17,7 +17,9 @@ const Dashboard = () => {
         }}>
 
         <PostForm />
-        <PostList />
+          <Card cardWidth="49.5vw">
+            <PostList/>
+          </Card>
       </Box>
     </div >
   )
