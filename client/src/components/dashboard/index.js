@@ -1,5 +1,6 @@
 import React from "react";
 import { CssBaseline, Box } from '@mui/material';
+
 import PostList from "../PostList";
 import PostDialoug from "../AddPost";
 
@@ -15,7 +16,7 @@ const Dashboard = () => {
           alignItems: 'center',
         }}>
           <PostDialoug/>
-            <PostList/>
+        <PostList />
       </Box>
     </div >
   )
