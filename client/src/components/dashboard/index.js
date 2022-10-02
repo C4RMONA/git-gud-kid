@@ -17,9 +17,8 @@ const Dashboard = () => {
         }}>
 
         <PostForm />
-          <Card cardWidth="30vw">
+          <Card cardWidth="49.5vw">
             <PostList/>
-            <h1>Bob</h1>
           </Card>
       </Box>
     </div >
