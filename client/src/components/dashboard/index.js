@@ -1,8 +1,7 @@
 import React from "react";
 import { CssBaseline, Box } from '@mui/material';
-import Card from "../Card";
-import PostForm from "../PostForm";
 import PostList from "../PostList";
+import PostDialoug from "../AddPost";
 
 const Dashboard = () => {
 
@@ -15,11 +14,8 @@ const Dashboard = () => {
           flexDirection: 'column',
           alignItems: 'center',
         }}>
-
-        <PostForm />
-          <Card cardWidth="49.5vw">
+          <PostDialoug/>
             <PostList/>
-          </Card>
       </Box>
     </div >
   )

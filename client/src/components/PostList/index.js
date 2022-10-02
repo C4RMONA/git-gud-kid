@@ -3,6 +3,7 @@ import { Box, CssBaseline, Typography } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MessageIcon from '@mui/icons-material/Message';
 import './index.css'
+import Card from "../Card/index";
 
 const thoughts = [
   {
@@ -36,6 +37,7 @@ const PostList = () => {
         <div className="postMap">
           {thoughts &&
             thoughts.map(thought => (
+              <Card cardWidth="49.5vw">
               <div key={thought._id}>
                 <h2>{title}</h2>
                 <p>
@@ -57,6 +59,7 @@ const PostList = () => {
 
                 </div>
               </div>
+              </Card>
             ))}
         </div>
       </Box>
