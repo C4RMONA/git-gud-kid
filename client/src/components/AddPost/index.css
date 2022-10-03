@@ -1,0 +1,13 @@
+.add-post {
+    color: var(--primary);
+    border: none;
+    
+}
+
+.text-field {
+    color: var(--primary);
+}
+
+.post-btn {
+    color: var(--primary);
+}

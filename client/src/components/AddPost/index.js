@@ -29,8 +29,11 @@ export default function PostDialoug() {
 
     return (
         <div>
-            <button className="add-post" variant='outlined' onClick={handleClickOpen}>
-                <AddCircleIcon id="add-post-button"/>
+            <button className="add-post" variant='outlined' onClick={handleClickOpen} >
+                <AddCircleIcon size="large" aria-label="add" className="add-post-button"
+                sx={{
+                    border: "4px", borderRadius: 1
+                }}/>
             </button>
             <Dialog fullScreen={fullScreen} 
                     open={open} 

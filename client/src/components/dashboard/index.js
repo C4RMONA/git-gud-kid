@@ -9,13 +9,22 @@ const Dashboard = () => {
   return (
     <div>Welcome to the dash!
       <CssBaseline />
+      <Box 
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-end',
+          justifyContent: 'flex-end'
+        }}
+      > 
+        <PostDialoug/>
+      </Box>
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
         }}>
-          <PostDialoug/>
         <PostList />
       </Box>
     </div >
