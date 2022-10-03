@@ -1,7 +1,13 @@
 .add-post {
     color: var(--primary);
     border: none;
+    bottom: 3rem;
     
+}
+
+.add-file-btn {
+    color: var(--primary);
+    margin: 10px;
 }
 
 .text-field {

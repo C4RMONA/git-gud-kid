@@ -7,16 +7,16 @@ import "./index.css";
 export default function PostDialoug() {
     const theme = createTheme({
         palette: {
-          primary: {
-            main: teal[700]
-          },
-          secondary: {
-            main: cyan[800]
-          }
+            primary: {
+                main: teal[700]
+            },
+            secondary: {
+                main: cyan[800]
+            }
         }
-      })
+    })
 
-    const [ open, setOpen ] = React.useState(false);
+    const [open, setOpen] = React.useState(false);
     const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     const handleClickOpen = () => {
@@ -29,35 +29,45 @@ export default function PostDialoug() {
 
     return (
         <div>
-            <button className="add-post" variant='outlined' onClick={handleClickOpen} >
+            <button
+                className="add-post"
+                variant='outlined'
+                onClick={handleClickOpen}
+            >
                 <AddCircleIcon size="large" aria-label="add" className="add-post-button"
-                sx={{
-                    border: "4px", borderRadius: 1
-                }}/>
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        fontSize: '100px'
+                    }}
+                />
+                Add Post!
             </button>
-            <Dialog fullScreen={fullScreen} 
-                    open={open} 
-                    onClose={handleClose}
-                    aria-labelledby="responsive-dialog-title">
+            <Dialog fullScreen={fullScreen}
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="responsive-dialog-title">
                 <DialogTitle id="responsive-dialog-title">
                     {"Add Post!"}
                 </DialogTitle>
-                <DialogContent>
-                    <DialogContentText>
+                <DialogContent >
+                    <DialogContentText >
                         <TextField
-                        autoFocus
-                        multiline
-                        margin='dense'
-                        id='post'
-                        label='create-post'
-                        type={String}
                         fullWidth
-                        variant='standard'/>
+                        label="What's on your mind?"
+                        id='fullWidth'
+                        sx={{
+                            color: "primary"
+                        }}
+                           />
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
                     <button className='post-btn' onClick={handleClose}> Cancel </button>
-                    <button className='post-btn'onClick={handleClose}> Post </button>
+                    <button className='post-btn' onClick={handleClose}> Post </button>
+                    <input accept="image/*" className="add-file-btn" id="raised-button-file" multiple type="file"
+/>
                 </DialogActions>
             </Dialog>
 
