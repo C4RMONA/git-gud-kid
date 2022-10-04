@@ -11,6 +11,15 @@ import Dashboard from './components/dashboard';
 import NoMatch from './pages/noMatch';
 import Post from './pages/Postforum';
 
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+});
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
