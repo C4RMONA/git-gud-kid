@@ -15,7 +15,7 @@ const Dashboard = () => {
   console.log(posts);
 
   return (
-    <div>Welcome to your classroom!
+    <div>Welcome to our classroom!
       <CssBaseline />
       <Box 
         sx={{
@@ -38,7 +38,7 @@ const Dashboard = () => {
         ) : (
         <PostList 
           posts={posts}
-          title="A Few Words from Ms Brown..."
+          title="Ms. Brown"
           />
         )}
       </Box>

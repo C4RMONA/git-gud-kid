@@ -31,7 +31,6 @@ const PostList = ({ posts, title }) => {
                 <div key={post._id}>
                   <h2>{title}</h2>
                   <p>
-                    {post.username} 
                     posted on {post.createdAt}
                   </p>
                   <div>
