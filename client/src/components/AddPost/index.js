@@ -9,7 +9,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import "./index.css";
 import { color } from '@mui/system';
 
-export default function PostDialoug() {
+export default function PostDialogue() {
     const theme = createTheme({
         palette: {
             primary: {
