@@ -6,6 +6,12 @@ const typeDefs = gql`
     username: String
     email: String
     posts: [Post]
+    isType: UserType! @search
+  }
+
+  enum UserType {
+    USER
+    ADMIN
   }
 
   type Post {
@@ -15,6 +21,7 @@ const typeDefs = gql`
     username: String
     replies: [Reply]
     replyCount: Int
+    access: [ACL]
   }
 
   type Reply {
@@ -42,6 +49,17 @@ const typeDefs = gql`
   type Auth {
     token: ID!
     user: User
+  }
+
+  type ACL {
+    id: ID!
+    level: AccessLevel!
+    grants: Post
+  }
+
+  enum AccessLevel {
+    VIEWER
+    OWNER
   }
 `;
 
