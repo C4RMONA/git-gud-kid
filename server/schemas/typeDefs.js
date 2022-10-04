@@ -14,6 +14,7 @@ const typeDefs = gql`
     createdAt: String
     username: String
     replies: [Reply]
+    replyCount: Int
   }
 
   type Reply {
@@ -34,6 +35,8 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
+    addPost(postText:String!): Post
+    addReply(postId: ID!, replyBody: String!): Post
   }
 
   type Auth {
