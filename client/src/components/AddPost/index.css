@@ -1,19 +1,63 @@
 .add-post {
-    color: var(--primary);
     border: none;
     bottom: 3rem;
     
 }
 
-.add-file-btn {
-    color: var(--primary);
-    margin: 10px;
+.text-window {
+    background-color: white;
+    width: 500px;
+    
+}
+
+.btn-container {
+    color: aliceblue;
+    text-align: center;
+    margin: auto;
+
+}
+
+.submit-post {
+    color: var(--secondary);
+    background-color: var(--tertiary);
+    margin: auto;
+    text-align: center;
+    width: 55px !important;
+    height: 55px !important;
+    cursor: pointer;
+}
+
+.cancel-post {
+    color: var(--secondary);
+    background-color: var(--tertiary);
+    margin: auto;
+    text-align: center;
+    width: 55px !important;
+    height: 55px !important;
+    cursor: pointer;
 }
 
 .text-field {
     color: var(--primary);
 }
 
-.post-btn {
-    color: var(--primary);
+.background-test {
+    background-color: var(--tertiary);
+}
+
+.text-window-width-test {
+    height: 200px;
+}
+
+.window-bg {
+    text-align: center;
+    color: aliceblue;
+}
+
+input {
+    color: var(--secondary);
+}
+
+input#file-upload-button {
+    background-image: url(../../assets/clippy.png);
 }
