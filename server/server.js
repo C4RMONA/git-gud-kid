@@ -4,7 +4,6 @@ const path = require('path')
 // importing the token auth middleware
 const { authMiddleware } = require('./utils/auth');
 
-const path = require('path');
 const { ApolloServer } = require('apollo-server-express');
 
 const { typeDefs, resolvers } = require('./schemas');
