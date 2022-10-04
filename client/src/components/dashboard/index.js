@@ -1,13 +1,21 @@
 import React from "react";
 import { CssBaseline, Box } from '@mui/material';
 
+// Import Apollo hook and query
+import { useQuery } from '@apollo/client';
+import { QUERY_POSTS } from "../../utils/queries";
+
 import PostList from "../PostList";
-import PostDialoug from "../AddPost";
+import PostDialogue from "../AddPost";
 
 const Dashboard = () => {
+  // useQuery hook to make query request from db
+  const { loading, data } = useQuery(QUERY_POSTS);
+  const posts = data?.posts || [];
+  console.log(posts);
 
   return (
-    <div>Welcome to the dash!
+    <div>Welcome to your classroom!
       <CssBaseline />
       <Box 
         sx={{
@@ -17,7 +25,7 @@ const Dashboard = () => {
           justifyContent: 'flex-end'
         }}
       > 
-        <PostDialoug/>
+        <PostDialogue/>
       </Box>
       <Box
         sx={{
@@ -25,7 +33,14 @@ const Dashboard = () => {
           flexDirection: 'column',
           alignItems: 'center',
         }}>
-        <PostList />
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+        <PostList 
+          posts={posts}
+          title="A Few Words from Ms Brown..."
+          />
+        )}
       </Box>
     </div >
   )
