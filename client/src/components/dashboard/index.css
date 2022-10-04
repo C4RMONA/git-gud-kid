@@ -1,0 +1,12 @@
+.headerNav {
+    margin: 0 2em 0 0;
+    text-decoration: none;
+    color: var(--secondary);
+  
+  }
+  
+  .home {
+    margin: 0 1em;
+    text-decoration: none;
+    color: var(--secondary);
+  }
