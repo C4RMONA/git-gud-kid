@@ -11,7 +11,7 @@ import NoMatch from './pages/noMatch';
 import Post from './pages/Postforum';
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
+  uri: '/graphql',
 });
 
 const client = new ApolloClient({

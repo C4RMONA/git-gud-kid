@@ -1,18 +1,15 @@
-import React from "react";
+import React from 'react';
 import { Box, CssBaseline, Typography } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MessageIcon from '@mui/icons-material/Message';
 
-import './index.css'
-import Card from "../Card";
-
-
+import './index.css';
+import Card from '../Card';
 
 const PostList = ({ posts, title }) => {
   if (!posts.length) {
-    return <h3>No Posts Yet, Stand By</h3>
+    return <h3>No Posts Yet. Stand By...</h3>;
   }
-  // const title = 'Teacher';
 
   return (
     <div className="postList">
@@ -23,16 +20,15 @@ const PostList = ({ posts, title }) => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-        }}>
+        }}
+      >
+        <h2>{title}</h2>
         <div className="postMap">
           {posts &&
-            posts.map(post => (
+            posts.map((post) => (
               <Card cardWidth="49.5vw">
                 <div key={post._id}>
-                  <h2>{title}</h2>
-                  <p>
-                    posted on {post.createdAt}
-                  </p>
+                  <p>posted on {post.createdAt}</p>
                   <div>
                     <Typography sx={{ width: '800px' }}>
                       {post.postText}
@@ -43,17 +39,15 @@ const PostList = ({ posts, title }) => {
                       <a href="/dashboard" className="comment">
                         {post.replyCount} Replies
                       </a>
-
                     </div>
-
                   </div>
                 </div>
               </Card>
             ))}
         </div>
-      </Box >
-    </div >
-  )
-}
+      </Box>
+    </div>
+  );
+};
 
 export default PostList;
