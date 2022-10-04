@@ -3,7 +3,6 @@ import { Box, CssBaseline, Typography } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MessageIcon from '@mui/icons-material/Message';
 import './index.css'
-import Card from "../Card/index";
 
 import Card from "../Card";
 
