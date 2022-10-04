@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
 import { Container, CssBaseline, Box, Avatar, Typography, TextField, Button, Card, createTheme, ThemeProvider, FormGroup, FormControlLabel, Switch } from '@mui/material'
 import { teal, cyan } from '@mui/material/colors';
+import { LOGIN_USER } from "../utils/mutations";
+import Auth from '../utils/auth';
 
 const theme = createTheme({
   palette: {
@@ -13,7 +16,43 @@ const theme = createTheme({
   }
 })
 
-const Login = () => {
+
+
+const Login = (props) => {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error }] = useMutation(LOGIN_USER);
+
+  // update state based on form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  console.log(formState)
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await login({
+        variables: { ...formState }
+      });
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+
+    // clear form values
+    setFormState({
+      email: '',
+      password: '',
+    });
+  };
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -31,10 +70,8 @@ const Login = () => {
             <Typography component="h1" variant="h5">
               Login
             </Typography>
-            <FormGroup>
-              <FormControlLabel control={<Switch defaultChecked />} label="Staff/Parent" />
-            </FormGroup>
-            <Box component='form'>
+
+            <Box component='form' onSubmit={handleFormSubmit}>
               <TextField
                 margin="normal"
                 required
@@ -42,6 +79,8 @@ const Login = () => {
                 id="email"
                 label="Email Address"
                 name="email"
+                value={formState.email}
+                onChange={handleChange}
                 autoComplete="email"
                 autoFocus
               />
@@ -53,6 +92,8 @@ const Login = () => {
                 label="Password"
                 type="password"
                 id="password"
+                value={formState.password}
+                onChange={handleChange}
                 autoComplete="current-password"
               />
               <Button
@@ -63,6 +104,7 @@ const Login = () => {
               >
                 Sign In
               </Button>
+              {error && <div>Login failed</div>}
             </Box>
           </Box>
         </Container>
@@ -70,5 +112,4 @@ const Login = () => {
     </ThemeProvider>
   )
 }
-
 export default Login;
