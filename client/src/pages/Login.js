@@ -32,9 +32,11 @@ const Login = (props) => {
     });
   };
 
+  console.log(formState)
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+
     try {
       const { data } = await login({
         variables: { ...formState }
@@ -43,6 +45,12 @@ const Login = (props) => {
     } catch (e) {
       console.error(e);
     }
+
+    // clear form values
+    setFormState({
+      email: '',
+      password: '',
+    });
   };
 
 
@@ -62,9 +70,7 @@ const Login = (props) => {
             <Typography component="h1" variant="h5">
               Login
             </Typography>
-            <FormGroup>
-              <FormControlLabel control={<Switch defaultChecked />} label="Staff/Parent" />
-            </FormGroup>
+
             <Box component='form' onSubmit={handleFormSubmit}>
               <TextField
                 margin="normal"
@@ -98,6 +104,7 @@ const Login = (props) => {
               >
                 Sign In
               </Button>
+              {error && <div>Login failed</div>}
             </Box>
           </Box>
         </Container>

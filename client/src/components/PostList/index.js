@@ -2,9 +2,11 @@ import React from "react";
 import { Box, CssBaseline, Typography } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MessageIcon from '@mui/icons-material/Message';
+import { useQuery } from "@apollo/client";
 import './index.css'
 
 import Card from "../Card";
+import { QUERY_POST } from "../../utils/queries";
 
 const thoughts = [
   {
@@ -24,6 +26,7 @@ const thoughts = [
 
 const PostList = () => {
   const title = 'Teacher';
+  const {loading, data} = useQuery(QUERY_POST)
 
   return (
     <div className="postList">
