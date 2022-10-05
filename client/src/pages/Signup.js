@@ -4,6 +4,8 @@ import { ADD_USER } from "../utils/mutations";
 import { Container, CssBaseline, Box, Avatar, Typography, TextField, Button, Card, createTheme, ThemeProvider, FormGroup, FormControlLabel, Switch } from '@mui/material'
 import { teal, cyan } from '@mui/material/colors';
 
+import Auth from '../utils/auth';
+
 const theme = createTheme({
   palette: {
     primary: {
