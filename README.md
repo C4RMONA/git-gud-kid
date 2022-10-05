@@ -1,4 +1,4 @@
-# git-gud-kid
+# ReachTeach
 Project 3
 ### Group Project 3
 
@@ -11,7 +11,7 @@ Project 3
 6. [Authors](#authors)
 
 ## Project Description
-
+Communications application for elementary school teachers to stay connected to their class's parents.
 
 ### User Story
 
@@ -24,9 +24,10 @@ Deployed URL: <br/><br/>
 - Node
 - Express
 - MongoDB
+- Material UI
 
 ## Usage
-Demo of the PetPortal website. <br>
+This app will be deployed onto a live server <br>
 ![](#)
 
 ## Future Development
