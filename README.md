@@ -9,7 +9,6 @@ Project 3
 4. [Usage](#usage)
 5. [Future Development](#future-development)
 6. [Authors](#authors)
-7. [Screenshot](#screenshot)
 
 ## Project Description
 Communications application for elementary school teachers to stay connected to their class's parents. This application provides parents the opportunity to stay informed about events happening in their child's class and to interact with the teacher and other parents through posts and replies.
@@ -21,6 +20,8 @@ As a teacher, I want to keep my students' parents updated with regular posts abo
 ## Deployed Website
 Deployed URL: <br/><br/>
 [Heroku-deployed Application](#https://enigmatic-sands-84780.herokuapp.com/)
+### Screenshot
+![ReachTeachScreenshot](/client/src/assets/README-screenshot.png)
 
 ## Built With
 - React
@@ -52,5 +53,3 @@ In the future, authorization to limit parents posting and e-commerce functionali
 **Samantha Guerra**
 - [GitHub Profile](https://github.com/Sam-Antics)
 - [LinkedIn](https://www.linkedin.com/in/seguerra/)
-
-## Screenshot
