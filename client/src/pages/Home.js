@@ -3,7 +3,6 @@ import { Box, useTheme, MobileStepper, Button } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
 import { maxHeight, maxWidth } from '@mui/system';
 
-
 const images = [
   {
     label: 'sciencefair',

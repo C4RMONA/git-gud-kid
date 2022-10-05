@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../utils/mutations";
 import { Container, CssBaseline, Box, Avatar, Typography, TextField, Button, Card, createTheme, ThemeProvider, FormGroup, FormControlLabel, Switch } from '@mui/material'
 import { teal, cyan } from '@mui/material/colors';
 
@@ -13,8 +15,37 @@ const theme = createTheme({
   }
 })
 
-const Signup = () => {
-  
+const Signup = (props) => {
+  const [formState, setFormState] = useState({ username: '', email: '', password: '' });
+  const [addUser, { error }] = useMutation(ADD_USER);
+
+  // update state based on form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  // submit form
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    // use try/catch instead of promises to handle errors
+    try {
+      // execute addUser mutation and pass in variable data from form
+      const { data } = await addUser({
+        variables: { ...formState }
+      });
+      Auth.login(data.addUser.token);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  console.log(formState)
 
   return (
     <ThemeProvider theme={theme}>
@@ -32,14 +63,16 @@ const Signup = () => {
             <Typography component="h1" variant="h5">
               Signup
             </Typography>
-            <Box component='form'>
+            <Box component='form' onSubmit={handleFormSubmit}>
               <TextField
                 margin="normal"
                 required
                 fullWidth
                 id="studentId"
                 label="Student Id"
-                name="studentId"
+                name="username"
+                value={formState.username}
+                onChange={handleChange}
                 autoFocus
               />
               <TextField
@@ -49,6 +82,8 @@ const Signup = () => {
                 id="email"
                 label="Email Address"
                 name="email"
+                value={formState.email}
+                onChange={handleChange}
                 autoComplete="email"
                 autoFocus
               />
@@ -60,6 +95,8 @@ const Signup = () => {
                 label="Password"
                 type="password"
                 id="password"
+                value={formState.password}
+                onChange={handleChange}
                 autoComplete="current-password"
               />
               <Button
@@ -70,6 +107,7 @@ const Signup = () => {
               >
                 Sign In
               </Button>
+              {error && <div>Sign up failed</div>}
             </Box>
           </Box>
         </Container>
