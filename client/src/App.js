@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import OnePost from './pages/OnePost';
 import Dashboard from './components/dashboard';
 import NoMatch from './pages/noMatch';
 import Post from './pages/Postforum';
@@ -42,7 +43,7 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login />} />
           <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/post' element={<Post />} />
+          <Route path='/post/:id' element={<OnePost />} />
           <Route path='*' element={<NoMatch />} />
         </Routes>
       </div>
