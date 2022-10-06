@@ -12,7 +12,6 @@ const Dashboard = () => {
   // useQuery hook to make query request from db
   const { loading, data } = useQuery(QUERY_POSTS);
   const posts = data?.posts || [];
-  console.log(posts);
 
   return (
     <div>
