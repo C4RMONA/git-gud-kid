@@ -35,4 +35,24 @@ export const QUERY_POST = gql`
   }
 `;
 
-
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      username
+      email
+      posts {
+        _id
+        postText
+        createdAt
+        replyCount
+        replies {
+          _id
+          createdAt
+          replyBody
+          username
+        }
+      }
+    }
+  }
+`;

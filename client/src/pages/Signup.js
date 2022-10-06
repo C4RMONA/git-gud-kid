@@ -68,8 +68,8 @@ const Signup = (props) => {
                 margin="normal"
                 required
                 fullWidth
-                id="studentId"
-                label="Student Id"
+                id="username"
+                label="Username"
                 name="username"
                 value={formState.username}
                 onChange={handleChange}
@@ -105,7 +105,7 @@ const Signup = (props) => {
                 variant="contained"
                 sx={{ mt: 3, }}
               >
-                Sign In
+                Sign Up
               </Button>
               {error && <div>Sign up failed</div>}
             </Box>

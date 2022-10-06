@@ -4,10 +4,6 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MessageIcon from '@mui/icons-material/Message';
 import { Link } from 'react-router-dom';
 
-// import the queries
-import { useQuery } from '@apollo/client';
-import { QUERY_POST } from '../../utils/queries';
-
 import './index.css';
 import Card from '../Card';
 
@@ -37,8 +33,8 @@ const PostList = ({ posts, title }) => {
                     <Typography sx={{ width: '800px' }}>
                       {post.postText}
                     </Typography>
-                    <p>posted on {post.createdAt}</p>
-                    <p>Replies: {post.replyCount} </p>
+                      <p>posted on {post.createdAt}</p>
+                      <p>Replies: {post.replyCount} </p>
                     <div>
                       <FavoriteBorderIcon className="icon"></FavoriteBorderIcon>
                       <MessageIcon className="icon"></MessageIcon>

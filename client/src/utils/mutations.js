@@ -20,6 +20,24 @@ export const ADD_USER = gql`
     }
   }
 `
+
+export const ADD_POST = gql`
+  mutation addPost($postText: String!) {
+    addPost(postText: $postText) {
+      _id
+      postText
+      createdAt
+      username
+      replyCount
+      replies {
+        _id
+        username
+        replyBody
+      }
+    }
+  }
+`
+
 // export const ADD_PARENT = gql`
 //   mutation addParent($studentId: String!, $email: String!, $password: String!) {
 //     addParent(studentId: $studentId, email: $email, password: $password) {
@@ -51,19 +69,6 @@ export const ADD_USER = gql`
 //       teacher {
 //         _id
 //         name
-//       }
-//     }
-//   }
-// `
-
-// export const ADD_POST = gql`
-//   mutation addPost($postText: String!) {
-//     addPost(postText: $postText) {
-//       _id
-//       postText
-//       commentCount
-//       comments {
-//         _id
 //       }
 //     }
 //   }

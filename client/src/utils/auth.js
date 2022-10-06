@@ -35,7 +35,7 @@ class AuthService {
 
   // set token to localStorage and reload page to homepage
   login(idToken) {
-    
+
     // saves user token to localStorage
     localStorage.setItem('id_token', idToken)
 
@@ -50,7 +50,6 @@ class AuthService {
     window.location.assign('/');
   }
   
-
   renderlogin() {
     setTimeout(window.location.assign('login'), 50000)
   }
