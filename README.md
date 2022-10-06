@@ -1,4 +1,4 @@
-# ReachTeach
+# ![Logo](/client/src/assets/logo-RT.png)![ReachTeach](/client//src/assets/RT.png)
 Project 3
 ### Group Project 3
 
