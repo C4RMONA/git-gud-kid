@@ -49,6 +49,11 @@ class AuthService {
     // this will reload the page and reset the state of the application
     window.location.assign('/');
   }
+  
+
+  renderlogin() {
+    setTimeout(window.location.assign('login'), 50000)
+  }
 }
 
 export default new AuthService();

@@ -5,6 +5,7 @@ import './index.css';
 // Import Apollo hook and query
 import { useQuery } from '@apollo/client';
 import { QUERY_POSTS } from '../../utils/queries';
+import Auth from '../../utils/auth'
 
 import PostList from '../PostList';
 import PostDialogue from '../AddPost';
@@ -15,34 +16,41 @@ const Dashboard = () => {
   const posts = data?.posts || [];
 
   return (
-    <div className="dash-header">
+    <div>
+      {Auth.loggedIn() ? (
+      <div className="dash-header">
       <h3>Welcome to Ms. Brown's classroom!</h3>
-      <CssBaseline />
-      <Box
+        <CssBaseline />
+        <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-end',
           justifyContent: 'flex-end',
         }}
-      >
+        >
         <PostDialogue />
       </Box>
       <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
       >
         {loading ? (
           <div>Loading...</div>
-        ) : (
-          <PostList posts={posts} title="Here's What's Happening..." />
+          ) : (
+            <PostList posts={posts} title="Here's What's Happening..." />
         )}
       </Box>
-    </div>
-  );
-};
+      </div>
+    ) : (
+      
+      Auth.renderlogin()
+      )}
+      </div>
+    );
+  };
 
 export default Dashboard;
