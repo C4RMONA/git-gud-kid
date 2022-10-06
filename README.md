@@ -9,6 +9,7 @@ Project 3
 4. [Usage](#usage)
 5. [Future Development](#future-development)
 6. [Authors](#authors)
+7. [Screenshot](#screenshot)
 
 ## Project Description
 Communications application for elementary school teachers to stay connected to their class's parents. This application provides parents the opportunity to stay informed about events happening in their child's class and to interact with the teacher and other parents through posts and replies.
