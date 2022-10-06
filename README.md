@@ -15,8 +15,10 @@ Project 3
 Communications application for elementary school teachers to stay connected to their class's parents. This application provides parents the opportunity to stay informed about events happening in their child's class and to interact with the teacher and other parents through posts and replies.
 
 ### User Story
-As a parent, I want to stay updated with activities and events that are happening in my child's class.
-As a teacher, I want to keep my students' parents updated with regular posts about what the class is doing.
+```
+AS A PARENT, I want to stay updated with activities and events that are happening in my child's class.
+AS A TEACHER, I want to keep my students' parents updated with regular posts about what the class is doing.
+```
 
 ## Deployed Website
 Deployed URL: <br/><br/>
