@@ -1,5 +1,6 @@
 import React from 'react';
 import { CssBaseline, Box } from '@mui/material';
+import './index.css';
 
 // Import Apollo hook and query
 import { useQuery } from '@apollo/client';
@@ -13,13 +14,12 @@ const Dashboard = () => {
   // useQuery hook to make query request from db
   const { loading, data } = useQuery(QUERY_POSTS);
   const posts = data?.posts || [];
-  console.log(posts);
 
   return (
     <div>
       {Auth.loggedIn() ? (
-        <div>
-        Welcome to Ms. Brown's classroom!
+      <div className="dash-header">
+      <h3>Welcome to Ms. Brown's classroom!</h3>
         <CssBaseline />
         <Box
         sx={{

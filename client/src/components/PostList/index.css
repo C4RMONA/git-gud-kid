@@ -15,3 +15,7 @@
 .comment {
   margin: auto;
 }
+
+.card-link {
+  text-decoration: none;
+}

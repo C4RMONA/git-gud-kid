@@ -47,8 +47,6 @@ const Signup = (props) => {
     }
   };
 
-  console.log(formState)
-
   return (
     <ThemeProvider theme={theme}>
       <Card variant="outline" >
