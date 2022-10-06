@@ -20,7 +20,7 @@ As a teacher, I want to keep my students' parents updated with regular posts abo
 
 ## Deployed Website
 Deployed URL: <br/><br/>
-[Heroku-deployed Application](#https://enigmatic-sands-84780.herokuapp.com/)
+[Heroku-deployed Application](https://enigmatic-sands-84780.herokuapp.com/)
 ### Demo
 ![ReachTeach Messenger](https://user-images.githubusercontent.com/101689362/194435435-4b53686a-55fe-4003-aee4-ef7b144611c1.gif)
 
