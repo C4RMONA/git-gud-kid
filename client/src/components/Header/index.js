@@ -51,7 +51,6 @@ const Header = () => {
                 <ul>
                   <Link className='headerNav' to='/login'>Login</Link>
                   <Link className='headerNav' to='/signup'>Signup</Link>
-                  <Link className='headerNav'>Contact Us</Link>
                 </ul>
               )}
             </nav>
