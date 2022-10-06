@@ -35,7 +35,6 @@ class AuthService {
 
   // set token to localStorage and reload page to homepage
   login(idToken) {
-    console.log('hello')
     // saves user token to localStorage
     localStorage.setItem('id_token', idToken)
 
