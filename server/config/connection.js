@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/git-gud-kid', {
+mongoose.connect(process.env.MONGODB_URI || process.env.DB_CONNECT, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

@@ -10,3 +10,11 @@
     text-decoration: none;
     color: var(--secondary);
   }
+
+.dash-header {
+  font-weight: 600;
+  font-size: 20px;
+  font-family:'Roboto Slab';
+  color: rgb(79, 107, 182);
+  padding: 15px;
+}

@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import OnePost from './pages/OnePost';
-import Dashboard from './components/dashboard';
+import Dashboard from './components/Dashboard';
 import NoMatch from './pages/noMatch';
 import Post from './pages/Postforum';
 

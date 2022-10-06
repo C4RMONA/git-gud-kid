@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import { Box, Grid, createTheme, ThemeProvider } from '@mui/material';
 import './index.css'
 import { teal, cyan } from '@mui/material/colors';
+import RT from '../../assets/RT.png';
+import RT2 from '../../assets/logo-RT.png';
+
 import Auth from '../../utils/auth'
+
 
 const theme = createTheme({
   palette: {
@@ -31,7 +35,8 @@ const Header = () => {
         <Grid container justifyContent='space-between' alignItems="center">
           <Grid>
             <Link className='home' to='/'>
-              <h1 className='home' >ReachTeach</h1>
+              <img src={ RT2 } width="90px" height="95px" alt="ReachTeach Logo 2"/>
+              <img src={ RT } width="400px" alt="ReachTeach Logo 1"/>
             </Link>
           </Grid>
           <Grid>
@@ -46,7 +51,6 @@ const Header = () => {
                 <ul>
                   <Link className='headerNav' to='/login'>Login</Link>
                   <Link className='headerNav' to='/signup'>Signup</Link>
-                  <Link className='headerNav'>Contact Us</Link>
                 </ul>
               )}
             </nav>

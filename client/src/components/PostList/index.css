@@ -1,7 +1,6 @@
-
-
 .postList {
   align-items: center;
+  text-decoration: none;
 }
 
 .postMap {
@@ -14,4 +13,8 @@
 
 .comment {
   margin: auto;
+}
+
+.card-link {
+  text-decoration: none;
 }
