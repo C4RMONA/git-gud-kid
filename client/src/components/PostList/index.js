@@ -2,6 +2,11 @@ import React from 'react';
 import { Box, CssBaseline, Typography } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MessageIcon from '@mui/icons-material/Message';
+import { Link } from 'react-router-dom';
+
+// import the queries
+import { useQuery } from '@apollo/client';
+import { QUERY_POST } from '../../utils/queries'
 
 import './index.css';
 import Card from '../Card';
@@ -26,20 +31,18 @@ const PostList = ({ posts, title }) => {
         <div className="postMap">
           {posts &&
             posts.map((post) => (
-              <Card cardWidth="49.5vw">
-                <div key={post._id}>
-                  <p>posted on {post.createdAt}</p>
-                  <div>
+              <Card cardWidth="49.5vw" key={post._id}>
+                <div>
+                  <Link to={`/post/${post._id}`}>
                     <Typography sx={{ width: '800px' }}>
                       {post.postText}
                     </Typography>
-                    <div>
-                      <FavoriteBorderIcon className="icon"></FavoriteBorderIcon>
-                      <MessageIcon className="icon"></MessageIcon>
-                      <a href="/dashboard" className="comment">
-                        {post.replyCount} Replies
-                      </a>
-                    </div>
+                  </Link>
+                    <p>posted on {post.createdAt}</p>
+                    <p>Replies: {post.replyCount} </p>
+                  <div>
+                    <FavoriteBorderIcon className="icon"></FavoriteBorderIcon>
+                    <MessageIcon className="icon"></MessageIcon>
                   </div>
                 </div>
               </Card>

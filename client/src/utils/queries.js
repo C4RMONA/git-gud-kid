@@ -18,20 +18,22 @@ query posts($username: String) {
 }
 `;
 
-// export const QUERY_POST = gql`
-//   query post($id: ID!) {
-//     post(_id: $id) {
-//       _id
-//       postText
-//       name
-//       comments{
-//         _id
-//         commentText
-//         parent
-//       }
-//     }
-//   }
-// `
+export const QUERY_POST = gql`
+  query post($id: ID!) {
+    post(_id: $id) {
+      _id
+      username
+      postText
+      createdAt
+      replyCount
+      replies {
+        _id
+        username
+        replyBody
+      }
+    }
+  }
+`
 
 // export const QUERY_CLASS = gql`
 //   query class($classId: String) {
