@@ -10,7 +10,7 @@ const CardComponent = ({ cardWidth, children }) => {
     }}>
         <Card variant="outlined">
             <CardActionArea>
-                <CardMedia component="img" height="100%" width="100%" image={require("../../assets/sciencefair.jpg")} alt="homework"></CardMedia>
+                
                 <CardContent variant="h5" component="div" className='cardContainer' >
                     {children}
                 </CardContent>

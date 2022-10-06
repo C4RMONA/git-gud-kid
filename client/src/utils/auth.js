@@ -49,6 +49,9 @@ class AuthService {
     window.location.assign('/');
   }
   
+  refresh() {
+    window.location.reload()
+  }
 
   renderlogin() {
     setTimeout(window.location.assign('login'), 50000)
