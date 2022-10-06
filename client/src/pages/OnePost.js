@@ -2,11 +2,13 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import ReplyList from '../components/ReplyList';
 
+import Card from '../components/Card';
+
 // import db queries
 import { useQuery } from '@apollo/client';
 import { QUERY_POST } from '../utils/queries';
 
-const OnePost = (props) => {
+const OnePost = props => {
   const { id: postId } = useParams();
 
   const { loading, data } = useQuery(QUERY_POST, {
@@ -20,12 +22,16 @@ const OnePost = (props) => {
   }
   return (
     <div>
-      <div>
-          <p>
-            {post.postText}
-          </p>
-      </div>
-      {/* {post.replyCount > 0 && <ReplyList reactions={post.replies} />} */}
+      <Card cardWidth="49.5vw">
+        <div>
+            <p>
+              {post.postText}
+            </p>
+        </div>
+      </Card>
+        <Card>
+            {post.replyCount > 0 && <ReplyList replies={post.replies} />}
+        </Card>
     </div>
   );
 };

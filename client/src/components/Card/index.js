@@ -10,7 +10,6 @@ const CardComponent = ({ cardWidth, children }) => {
     }}>
         <Card variant="outlined">
             <CardActionArea>
-                
                 <CardContent variant="h5" component="div" className='cardContainer' >
                     {children}
                 </CardContent>
