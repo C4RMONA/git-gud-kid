@@ -17,40 +17,34 @@ const Dashboard = () => {
 
   return (
     <div>
-      {Auth.loggedIn() ? (
-        <div>
-        Welcome to Ms. Brown's classroom!
-        <CssBaseline />
-        <Box
+      Welcome to Ms. Brown's classroom!
+      <CssBaseline />
+      <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-end',
           justifyContent: 'flex-end',
         }}
-        >
+      >
         <PostDialogue />
       </Box>
       <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
       >
         {loading ? (
           <div>Loading...</div>
-          ) : (
-            <PostList posts={posts} title="Here's What's Happening..." />
+        ) : (
+          <PostList posts={posts} title="Here's What's Happening..." />
         )}
       </Box>
-      </div>
-    ) : (
-      
-      Auth.renderlogin()
-      )}
-      </div>
-    );
-  };
+    </div>
+
+  );
+};
 
 export default Dashboard;
