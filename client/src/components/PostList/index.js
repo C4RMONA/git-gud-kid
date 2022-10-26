@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, CssBaseline, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MessageIcon from '@mui/icons-material/Message';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,6 @@ const PostList = ({ posts, title }) => {
 
   return (
     <div className="postList">
-      <CssBaseline />
       <Box
         sx={{
           marginTop: 8,
@@ -30,6 +29,7 @@ const PostList = ({ posts, title }) => {
               <Link className="card-link" to={`/post/${post._id}`}>
                 <Card cardWidth="59.5vw" key={post._id}>
                   <div>
+                    <h1>{post.username}</h1>
                     <Typography sx={{ width: '100%'}}>
                       {post.postText}
                     </Typography>

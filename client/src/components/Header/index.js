@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Grid, createTheme, ThemeProvider } from '@mui/material';
+import { Box, Grid, createTheme, ThemeProvider, CssBaseline } from '@mui/material';
 import './index.css'
 import { teal, cyan } from '@mui/material/colors';
 import RT from '../../assets/RT.png';
@@ -31,6 +31,7 @@ const Header = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Box sx={{ flexGrow: 1, bgcolor: 'primary.main' }}>
         <Grid className='head' container justifyContent='space-between' alignItems="center">
           <Grid>

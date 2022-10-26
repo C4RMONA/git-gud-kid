@@ -56,6 +56,52 @@ h6 {
  color: var(--primary) !important;
 }
 
+.single-post {
+  align-items: center !important;
+}
+
+.add-post {
+  position: absolute;
+  right: 50px;
+  border: none;
+  bottom: 3rem;
+  background-color: white;
+}
+
+.text-window {
+  background-color: white;
+  width: 500px;
+  padding-top: 30px;
+}
+
+.btn-container {
+  color: var(--tertiary);
+  text-align: center;
+  margin: auto;
+}
+
+.post-btn {
+  color: var(--tertiary);
+  margin: auto;
+  text-align: center;
+  width: 55px !important;
+  height: 55px !important;
+  cursor: pointer;
+}
+
+.textfield-container {
+  height: 200px;
+  padding-top: 20px;
+  background-color: white !important;
+}
+
+.dialog-header {
+  text-align: center;
+  color: aliceblue;
+  background-color: var(--tertiary);
+  margin-bottom: 3%;
+}
+
 @media screen and (max-width: 980px) {
 .head {
   display: flex;

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../PostList';
-import { Box, Card, CardContent, CardActionArea, CardMedia, } from '@mui/material';
+import { Box, Card, CardContent, CardActionArea } from '@mui/material';
 import "./index.css"
 
 const CardComponent = ({ cardWidth, children }) => {

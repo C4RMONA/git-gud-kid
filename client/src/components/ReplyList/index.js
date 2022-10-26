@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 import Card from '../Card';
 
 const ReplyList = ({ replies }) => {
@@ -14,7 +12,7 @@ const ReplyList = ({ replies }) => {
           {replies &&
             replies.map(reply => (
               <Card>
-                <p key={reply.id}>{reply.replyBody}</p>
+                <p key={reply._id}>{reply.replyBody}</p>
               </Card>
             ))}
         </div>
