@@ -28,9 +28,9 @@ const PostList = ({ posts, title }) => {
           {posts &&
             posts.map(post => (
               <Link className="card-link" to={`/post/${post._id}`}>
-                <Card cardWidth="49.5vw" key={post._id}>
+                <Card cardWidth="59.5vw" key={post._id}>
                   <div>
-                    <Typography sx={{ width: '800px' }}>
+                    <Typography sx={{ width: '100%'}}>
                       {post.postText}
                     </Typography>
                       <p>posted on {post.createdAt}</p>

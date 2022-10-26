@@ -1,25 +1,25 @@
 .add-post {
+    position: absolute;
+    right: 50px;
     border: none;
     bottom: 3rem;
-    
+    background-color: white;
 }
 
 .text-window {
     background-color: white;
     width: 500px;
-    
+    padding-top: 30px;
 }
 
 .btn-container {
-    color: aliceblue;
+    color: var(--tertiary);
     text-align: center;
     margin: auto;
-
 }
 
-.submit-post {
-    color: var(--secondary);
-    background-color: var(--tertiary);
+.post-btn {
+    color: var(--tertiary);
     margin: auto;
     text-align: center;
     width: 55px !important;
@@ -27,37 +27,17 @@
     cursor: pointer;
 }
 
-.cancel-post {
-    color: var(--secondary);
-    background-color: var(--tertiary);
-    margin: auto;
-    text-align: center;
-    width: 55px !important;
-    height: 55px !important;
-    cursor: pointer;
-}
-
-.text-field {
-    color: var(--primary);
-}
-
-.background-test {
-    background-color: var(--tertiary);
-}
-
-.text-window-width-test {
+.textfield-container {
     height: 200px;
+    padding-top: 20px;
+    background-color: white !important;
+
 }
 
-.window-bg {
+.dialog-header {
     text-align: center;
     color: aliceblue;
-}
+    background-color: var(--tertiary);
+    margin-bottom: 3%;
 
-input {
-    color: var(--secondary);
-}
-
-input#file-upload-button {
-    background-image: url(../../assets/clippy.png);
 }

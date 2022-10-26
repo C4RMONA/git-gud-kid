@@ -5,6 +5,12 @@
 
 .postMap {
   width: 100%;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.postMap::-webkit-scrollbar{
+  display: none;
 }
 
 .icon {

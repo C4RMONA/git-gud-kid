@@ -44,7 +44,7 @@ export default function PostDialogue() {
       });
     }
   })
-  
+
   console.log(postText)
   const handleChange = (event) => {
     setText(event.target.value);
@@ -94,55 +94,51 @@ export default function PostDialogue() {
               alignItems: 'center',
               fontSize: '100px',
               m: 1,
-              color: 'primary.main'
+              color: 'primary.main',
+              bgcolor: 'white'
             }}
           />
           Add Post
         </button>
         <Dialog
-          fullScreen={fullScreen}
           open={open}
           onSubmit={handleClose}
           aria-labelledby="responsive-dialog-title"
         >
-          <div className='background-test'
-            sx={{
-              color: 'primary.main'
-            }}
+          <DialogTitle
+            id="responsive-dialog-title"
+            className='dialog-header'
           >
-            <DialogTitle
-              id="responsive-dialog-title"
-              className='window-bg'
-            >
-              {"Add Post!"}
-            </DialogTitle>
-            <DialogContent
-              className='bg-color'>
-              <DialogContentText className='text-window-width-test'>
-                <TextField
-                  label="Share something with the class?"
-                  id='fullWidth'
-                  value={postText}
-                  onChange={handleChange}
-                  className='text-window'
-
-                />
-              </DialogContentText>
-            </DialogContent>
-          </div>
+            {"Add Post!"}
+          </DialogTitle>
+          <DialogContent
+            className='bg-color'>
+            <DialogContentText className='textfield-container'>
+              <TextField
+                label="Share something with the class?"
+                id='fullWidth'
+                multiline
+                minRows={2}
+                maxRows={4}
+                value={postText}
+                onChange={handleChange}
+                className='text-window'
+                variant='filled'
+              />
+            </DialogContentText>
+          </DialogContent>
           <DialogActions className='background-test'>
             <div className='btn-container'>
-              <CancelOutlinedIcon className='cancel-post' onClick={handleClose} />
+              <CancelOutlinedIcon className='post-btn' onClick={handleClose} />
               <h5> Cancel Post! </h5>
             </div>
 
             <div className='btn-container'>
-              <AddCircleOutlineOutlinedIcon className='submit-post' onClick={handleFormSubmit} />
+              <AddCircleOutlineOutlinedIcon className='post-btn' onClick={handleFormSubmit} />
               <h5> Add Post! </h5>
             </div>
           </DialogActions>
         </Dialog>
-
       </div>
     </ThemeProvider>
 

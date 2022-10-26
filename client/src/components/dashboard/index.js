@@ -32,6 +32,7 @@ const Dashboard = () => {
         <PostDialogue />
       </Box>
       <Box
+      className='post'
       sx={{
         display: 'flex',
         flexDirection: 'column',

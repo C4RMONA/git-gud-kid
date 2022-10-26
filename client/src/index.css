@@ -12,7 +12,7 @@
 
 html,
 body {
-  min-height: 100%;
+  min-height: 100vh;
   color: black;
 }
 
@@ -54,4 +54,67 @@ h6 {
 
 .Mui-disabled {
  color: var(--primary) !important;
+}
+
+@media screen and (max-width: 980px) {
+.head {
+  display: flex;
+  flex-direction: column !important;
+  padding-top: 3%;
+}
+
+.headerNav {
+  font-size: 30px;
+}
+
+.homecarousel {
+  margin-top: 20%;
+}
+
+.carousel-imgs {
+  padding-top: 5% !important;
+  max-width: 80% !important;
+}
+
+.carousel-steppers {
+  max-width: 60% !important;
+}
+
+.carousel-btn {
+  font-size: 20px !important; 
+}
+
+/* login/signup forms */
+.form-btn {
+  height: 5vh;
+}
+
+.form-input {
+  height: 7vh !important;
+}
+
+/* post */
+.post-card {
+  width: 100% !important;
+  max-width: 80vw;
+}
+}
+
+@media screen and (max-width: 758px) {
+
+}
+
+@media screen and (max-width: 575px) {
+  .home {
+    width: 10% !important;
+    flex: 30%;
+  }
+
+  .logo-1 {
+    width: 70%;
+  }
+
+  .logo-2 {
+    width: 20%;
+  }
 }

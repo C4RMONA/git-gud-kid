@@ -76,6 +76,7 @@ const Signup = (props) => {
                 autoFocus
               />
               <TextField
+                className="form-input"
                 margin="normal"
                 required
                 fullWidth
@@ -88,6 +89,7 @@ const Signup = (props) => {
                 autoFocus
               />
               <TextField
+                className="form-input"
                 margin="normal"
                 required
                 fullWidth
@@ -100,6 +102,7 @@ const Signup = (props) => {
                 autoComplete="current-password"
               />
               <Button
+                className="form-btn"
                 type="submit"
                 fullWidth
                 variant="contained"

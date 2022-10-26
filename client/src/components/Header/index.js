@@ -32,11 +32,11 @@ const Header = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ flexGrow: 1, bgcolor: 'primary.main' }}>
-        <Grid container justifyContent='space-between' alignItems="center">
+        <Grid className='head' container justifyContent='space-between' alignItems="center">
           <Grid>
             <Link className='home' to='/'>
-              <img src={ RT2 } width="90px" height="95px" alt="ReachTeach Logo 2"/>
-              <img src={ RT } width="400px" alt="ReachTeach Logo 1"/>
+              <img className='logo-2' src={ RT2 } width="90px" height="95px" alt="ReachTeach Logo 2"/>
+              <img className='logo-1' src={ RT } width="400px" alt="ReachTeach Logo 1"/>
             </Link>
           </Grid>
           <Grid>

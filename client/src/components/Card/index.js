@@ -4,11 +4,12 @@ import { Box, Card, CardContent, CardActionArea, CardMedia, } from '@mui/materia
 import "./index.css"
 
 const CardComponent = ({ cardWidth, children }) => {
-    return (<Box sx={{
+    return (<Box className='post-card' sx={{
         width: cardWidth,
         alignItems: "center"
+        
     }}>
-        <Card variant="outlined">
+        <Card  variant="outlined">
             <CardActionArea>
                 <CardContent variant="h5" component="div" className='cardContainer' >
                     {children}
