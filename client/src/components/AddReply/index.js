@@ -37,7 +37,9 @@ const ReplyForm = ({ postId }) => {
       await addReply({
         variables: { replyBody, postId }
       });
-
+      
+      setBody('');
+      setOpen(false);
     } catch (e) {
       console.error(e);
     }

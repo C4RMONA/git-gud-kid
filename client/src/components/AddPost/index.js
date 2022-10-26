@@ -9,17 +9,17 @@ import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOu
 import { cyan, teal } from '@mui/material/colors';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 
-export default function PostDialogue() {
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: teal[700]
-      },
-      secondary: {
-        main: cyan[800]
-      }
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: teal[700]
+    },
+    secondary: {
+      main: cyan[800]
     }
-  })
+  }
+})
+export default function PostDialogue() {
 
   const [postText, setText] = useState('');
   const [addPost, { error }] = useMutation(ADD_POST, {
@@ -43,28 +43,25 @@ export default function PostDialogue() {
     }
   })
 
-  console.log(postText)
   const handleChange = (event) => {
     setText(event.target.value);
   }
 
-
-
-  const handleFormSubmit = async event => {
+  const handleFormSubmit = async (event) => {
 
     try {
       await addPost({
         variables: { postText }
       });
       setText('');
-
     } catch (e) {
       console.error(e);
     }
-  }
+    setOpen(false);
+    location.reload();
+  };
 
   const [open, setOpen] = React.useState(false);
-  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleClickOpen = () => {
     setOpen(true);

@@ -2,13 +2,13 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import ReplyList from '../components/ReplyList';
 import ReplyForm from '../components/AddReply'
-
 import Card from '../components/Card';
 
 // import db queries
 import { useQuery } from '@apollo/client';
 import { QUERY_POST } from '../utils/queries';
 import { CssBaseline, Box } from '@mui/material';
+import Auth from '../utils/auth'
 
 const OnePost = props => {
   const { id: postId } = useParams();
@@ -38,11 +38,11 @@ const OnePost = props => {
             </p>
           </div>
         </Card>
-        <Card>
+        <Card cardWidth={'59.9vw'}>
           {post.replyCount > 0 && <ReplyList replies={post.replies} />}
         </Card>
       </Box>
-        <ReplyForm />
+          {Auth.loggedIn() && <ReplyForm postId={post._id} />}
     </div>
   );
 };
