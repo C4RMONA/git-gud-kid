@@ -56,6 +56,7 @@ const Home = () => {
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 0 ? (
               <Box
+                className='carousel-imgs'
                 component="img"
                 sx={{
                   height: '500px',
@@ -72,13 +73,14 @@ const Home = () => {
           </div>
         ))}
       <MobileStepper
+      className='carousel-steppers'
         variant="dots"
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
         sx={{ maxWidth: 400, flexGrow: 1,  backgroundColor: 'black'}}
         nextButton={
-          <Button size="small" sx={{ color: 'white'}} onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+          <Button className='carousel-btn' size="small" sx={{ color: 'white'}} onClick={handleNext} disabled={activeStep === maxSteps - 1}>
             Next
             {theme.direction === 'rtl' ? (
               <KeyboardArrowLeft />
@@ -88,7 +90,7 @@ const Home = () => {
           </Button>
         }
         backButton={
-          <Button size="small" sx={{ color: 'white'}} onClick={handleBack} disabled={activeStep === 0}>
+          <Button className='carousel-btn' size="small" sx={{ color: 'white'}} onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? (
               <KeyboardArrowRight />
             ) : (

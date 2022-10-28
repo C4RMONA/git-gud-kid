@@ -12,7 +12,7 @@
 
 html,
 body {
-  min-height: 100%;
+  min-height: 100vh;
   color: black;
 }
 
@@ -54,4 +54,128 @@ h6 {
 
 .Mui-disabled {
  color: var(--primary) !important;
+}
+
+.single-post {
+  align-items: center !important;
+}
+
+.add-post {
+  position: absolute;
+  right: 50px;
+  border: none;
+  bottom: 3rem;
+  background-color: white;
+}
+
+.text-window {
+  background-color: white;
+  width: 500px;
+  padding-top: 30px;
+}
+
+.btn-container {
+  color: var(--tertiary);
+  text-align: center;
+  margin: auto;
+}
+
+.post-btn {
+  color: var(--tertiary);
+  margin: auto;
+  text-align: center;
+  width: 55px !important;
+  height: 55px !important;
+  cursor: pointer;
+}
+
+.textfield-container {
+  height: 200px;
+  padding-top: 20px;
+  background-color: white !important;
+}
+
+.dialog-header {
+  text-align: center;
+  color: aliceblue;
+  background-color: var(--tertiary);
+  margin-bottom: 3%;
+}
+
+.replyList {
+  align-items: center;
+  text-decoration: none;
+}
+
+.replyMap {
+  width: 100%;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.replyMap::-webkit-scrollbar{
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+.head {
+  display: flex;
+  flex-direction: column !important;
+  padding-top: 3%;
+}
+
+.headerNav {
+  font-size: 30px;
+}
+
+.homecarousel {
+  margin-top: 20%;
+}
+
+.carousel-imgs {
+  padding-top: 5% !important;
+  max-width: 80% !important;
+}
+
+.carousel-steppers {
+  max-width: 60% !important;
+}
+
+.carousel-btn {
+  font-size: 20px !important; 
+}
+
+/* login/signup forms */
+.form-btn {
+  height: 5vh;
+}
+
+.form-input {
+  height: 7vh !important;
+}
+
+/* post */
+.post-card {
+  width: 100% !important;
+  max-width: 80vw;
+}
+}
+
+@media screen and (max-width: 758px) {
+
+}
+
+@media screen and (max-width: 575px) {
+  .home {
+    width: 10% !important;
+    flex: 30%;
+  }
+
+  .logo-1 {
+    width: 70%;
+  }
+
+  .logo-2 {
+    width: 20%;
+  }
 }

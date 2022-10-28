@@ -71,6 +71,7 @@ const Login = (props) => {
 
             <Box component='form' onSubmit={handleFormSubmit}>
               <TextField
+                className="form-input"
                 margin="normal"
                 required
                 fullWidth
@@ -83,6 +84,7 @@ const Login = (props) => {
                 autoFocus
               />
               <TextField
+                className="form-input"
                 margin="normal"
                 required
                 fullWidth
@@ -95,6 +97,7 @@ const Login = (props) => {
                 autoComplete="current-password"
               />
               <Button
+                className="form-btn"
                 type="submit"
                 fullWidth
                 variant="contained"
